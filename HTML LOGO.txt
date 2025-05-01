@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Deriv Trading App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top-right image logo -->
+  <img src="MANNA.jpg" alt="Manna Logo" class="logo-top-right">
+
+  <div class="container">
+    <!-- Centered MANNA text -->
+    <div class="manna-logo">MANNA</div>
+
+    <button id="login-btn">Login with Deriv</button>
+
+    <div id="user-info" class="hidden">
+      Logged in as: <span id="user-name"></span>
+    </div>
+
+    <div id="contract-form" class="hidden">
+      <h3>Buy Contract</h3>
+      <select id="symbol-dropdown"></select>
+      <select id="contract-type">
+        <option value="CALL">Rise</option>
+        <option value="PUT">Fall</option>
+        <option value="DIGITOVER">Digit Over</option>
+        <option value="DIGITUNDER">Digit Under</option>
+        <option value="DIGITMATCH">Digit Match</option>
+        <option value="DIGITDIFF">Digit Differs</option>
+        <option value="DIGITEVEN">Digit Even</option>
+        <option value="DIGITODD">Digit Odd</option>
+      </select>
+      <input type="number" id="stake" placeholder="Stake amount">
+      <button id="buy-contract">Buy</button>
+      <div id="buy-result"></div>
+    </div>
+
+    <div id="copy-trading" class="hidden">
+      <h3>Copy Trading</h3>
+      <input type="text" id="master-token" placeholder="Master account token">
+      <button id="start-copy">Start Copying</button>
+      <div id="copy-status"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
